@@ -14,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
         var randomWeapon = weapons[Math.floor(Math.random()*weapons.length)];
         var randomLocation = where[Math.floor(Math.random()*where.length)];
 
-        var h3 = document.createElement('h3');
-        h3.innerText = 'Accusation ' + i;
-        game.appendChild(h3);
+        var accusation = document.createElement('h3');
+        accusation.innerText = 'Accusation ' + i;
+        game.appendChild(accusation);
 
         var clue = {
             suspect: randomSuspect,
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             where: randomLocation
         };
 
-        h3.addEventListener('click', message.bind(clue));
+        accusation.addEventListener('click', message.bind(clue));
     }
 
     function message(){
