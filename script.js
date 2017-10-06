@@ -2,12 +2,13 @@ var suspect = ["Alice", "The Mad Hatter", "Cheshire Cat", "Tweedledum", "Tweedle
     weapons = ["a light saber", "the zombie virus", "a mallet", "a thorn", "the song that never ends",
     "Avada Kedavra!", "Katnis' bow and arrow", "a rope", "a katana", "a chicken bone",
     "a piece of glass", "dragon fire", "pixie dust", "a baseball bat", "Medusa's eyes",
-    "King Arthur's sword", "the Autobots", "a phaser set to 'kill'", "Pan Galactic Gargle Blaster", "a dementor"],
+    "King Arthur's sword", "the Autobots", "a phaser set to 'kill'", "a Pan Galactic Gargle Blaster", "a dementor"],
     where = ["the Forbidden Forest", "the Cathedral", "the watchtower", "bed", "Vulcan airspace",
-    "the bridge of the Enterprise", "Red Mountain Park", "the iLab", "the Garden", "Serendipity"];
+    "USS Enterprise while Captain Picard said \"1 to beam up\"", "Red Mountain Park", "the iLab", "the Garden", "Serendipity"];
 
 //I accuse FRIEND_NAME, with the WEAPON_NAME in the LOCATION_NAME!
 document.addEventListener("DOMContentLoaded", function () {
+    var game=document.getElementById("#game");
     for (var i = 1; i <= 100; i++) {
         var randomSuspect = suspect[Math.floor(Math.random()*suspect.length)];
         var randomWeapon = weapons[Math.floor(Math.random()*weapons.length)];
@@ -15,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         var h3 = document.createElement('h3');
         h3.innerText = 'Accusation ' + i;
-        document.body.appendChild(h3);
+        game.appendChild(h3);
 
         var clue = {
             suspect: randomSuspect,

@@ -1,0 +1,13 @@
+.background{
+    background-image:url(images/alice-in-wonderland-new-art.jpg);
+}
+.game{
+    text-align: center;
+}
+.game h3{
+  
+    color:white;
+    font-size: 2em;
+    /*background-color: lavenderblush;*/
+    
+}
